@@ -9,19 +9,19 @@ function createShape(type) {
 <template>
     <div class="control-board">
         <div class="shape-box" @click="createShape('rectangle')">
-            <img src="icons/rectangle.png" alt="Rectangle" />
+            <img src="/icons/rectangle.png" alt="Rectangle" />
         </div>
         <div class="shape-box" @click="createShape('circle')">
-            <img src="icons/circle.png" alt="Circle" />
+            <img src="/icons/circle.png" alt="Circle" />
         </div>
         <div class="shape-box" @click="createShape('horizontal-line')">
-            <img src="icons/horizontal-line.png" alt="Horizontal Line" />
+            <img src="/icons/horizontal-line.png" alt="Horizontal Line" />
         </div>
         <div class="shape-box" @click="createShape('vertical-line')">
-            <img src="icons/vertical-line.png" alt="Vertical Line" />
+            <img src="/icons/vertical-line.png" alt="Vertical Line" />
         </div>
         <div class="shape-box" @click="createShape('text')">
-            <img src="icons/text.png" alt="Text" />
+            <img src="/icons/text.png" alt="Text" />
         </div>
     </div>
 </template>

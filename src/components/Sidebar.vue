@@ -37,7 +37,7 @@ function handleRemove() {
 
       <div class="actions">
         <div class="remove-btn" @click="handleRemove">
-          <img src="icons/remove.png" alt="Remove shape" />
+          <img src="/icons/remove.png" alt="Remove shape" />
         </div>
       </div>
     </div>
