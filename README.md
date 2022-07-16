@@ -3,6 +3,8 @@ Questa repository contiene un'app realizzata in Vue 3 con la Composition API.
 Permette la creazione, la modifica e lo spostamento di alcune forme (rettangolo, cerchio, linea, testo) su una canvas.
 **N.B.** l'app ha un utilizzo didattico.
 
+Demo: [Canvas App](https://vue-canvas-example.netlify.app/)
+
 #### Componenti
 - **Board**: gestisce la canvas (draw e d&d). 
 ```js
