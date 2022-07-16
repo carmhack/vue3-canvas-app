@@ -1,35 +1,35 @@
-# vue-example
+## Vue 3 Canvas App
+Questa repository contiene un'app realizzata in Vue 3 con la Composition API.
+Permette la creazione, la modifica e lo spostamento di alcune forme (rettangolo, cerchio, linea, testo) su una canvas.
+**N.B.** l'app ha un utilizzo didattico.
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+#### Componenti
+- **Board**: gestisce la canvas (draw e d&d). 
+```js
+const props = defineProps(['shapes']);
+const emit = defineEmits(['moveShape', 'selectShape']);
+```
+- **ControlBoard**: gestisce i pulsanti per la creazione delle forme.
+```js
+const emit = defineEmits(['createShape']);
+```
+- **Sidebar**: mostra le proprietà della forma selezionata, permettendone la modifica e la cancellazione.
+```js
+const props = defineProps(['selectedShape']);
+const emit = defineEmits(['changeProp', 'removeShape']);
+```
+- **App**: gestisce lo stato dell'app.
+```js
+const state = reactive({
+  shapes: [],
+  selectedShape: null,
+  selectedShapeIndex: -1
+});
 ```
 
-### Compile and Hot-Reload for Development
+#### Utilizzo
 
-```sh
+```js
+npm i
 npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```
